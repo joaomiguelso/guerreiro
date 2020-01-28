@@ -4,11 +4,6 @@ import classNames from "classnames";
 // @material-ui/core components
 import withStyles from "@material-ui/core/styles/withStyles";
 
-// @material-ui/icons
-
-// React icons
-import { FaPlay } from 'react-icons/fa';
-
 // core components
 import Header from "components/Header/Header.jsx";
 import Footer from "components/Footer/Footer.jsx";
@@ -26,6 +21,7 @@ import TeamSection from "./Sections/TeamSection.jsx";
 import WorkSection from "./Sections/WorkSection.jsx";
 
 import { BRAND_NAME } from "../../constants/common";
+import { LANDING_TITLE, LANDING_DESCRIPTION, LANDING_BACKGROUND, LANDING_BUTTON } from "../../constants/landing";
 
 const dashboardRoutes = [];
 
@@ -46,28 +42,25 @@ class LandingPage extends React.Component {
           }}
           {...rest}
         />
-        <Parallax filter image={require("assets/img/landing-bg.jpg")}>
+        <Parallax filter image={LANDING_BACKGROUND}>
           <div className={classes.container}>
             <GridContainer>
               <GridItem xs={12} sm={12} md={6}>
-                <h1 className={classes.title}>Your Story Starts With Us.</h1>
+                <h1 className={classes.title}>{LANDING_TITLE}</h1>
                 <h4>
-                  Every landing page needs a small description after the big
-                  bold title, that's why we added this text here. Add here all
-                  the information that can make you or your product create the
-                  first impression.
+                 {LANDING_DESCRIPTION}
                 </h4>
                 <br />
-                <Button
-                  color="danger"
-                  size="lg"
-                  href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                {LANDING_BUTTON.isEnabled && <Button
+                  color={LANDING_BUTTON.color}
+                  size={LANDING_BUTTON.size}
+                  href={LANDING_BUTTON.link}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <FaPlay/>
-                  Watch video
-                </Button>
+                  {LANDING_BUTTON.icon}
+                  {LANDING_BUTTON.description}
+                </Button>}
               </GridItem>
             </GridContainer>
           </div>
