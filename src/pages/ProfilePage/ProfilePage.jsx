@@ -34,6 +34,8 @@ import work5 from "assets/img/examples/clem-onojegaw.jpg";
 
 import profilePageStyle from "assets/jss/material-kit-react/views/profilePage.jsx";
 
+import { BRAND_NAME } from "../../constants/common";
+
 class ProfilePage extends React.Component {
   render() {
     const { classes, ...rest } = this.props;
@@ -47,7 +49,7 @@ class ProfilePage extends React.Component {
       <div>
         <Header
           color="transparent"
-          brand="Material Kit React"
+          brand={BRAND_NAME}
           rightLinks={<HeaderLinks />}
           fixed
           changeColorOnScroll={{

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "gatsby";
 // nodejs library that concatenates classes
 import classNames from "classnames";
 // nodejs library to set properties for components
@@ -15,6 +16,7 @@ import Drawer from "@material-ui/core/Drawer";
 import Menu from "@material-ui/icons/Menu";
 // core components
 import headerStyle from "assets/jss/material-kit-react/components/headerStyle.jsx";
+import "./header.scss";
 
 class Header extends React.Component {
   constructor(props) {
@@ -73,7 +75,7 @@ class Header extends React.Component {
       [classes.absolute]: absolute,
       [classes.fixed]: fixed
     });
-    const brandComponent = <Button className={classes.title}>{brand}</Button>;
+    const brandComponent = <Button className={classes.title}><Link to="/">{brand}</Link></Button>;
     return (
       <AppBar className={appBarClasses}>
         <Toolbar className={classes.container}>

@@ -25,6 +25,8 @@ import loginPageStyle from "assets/jss/material-kit-react/views/loginPage.jsx";
 
 import image from "assets/img/bg7.jpg";
 
+import { BRAND_NAME } from "../../constants/common";
+
 class LoginPage extends React.Component {
   constructor(props) {
     super(props);
@@ -49,7 +51,7 @@ class LoginPage extends React.Component {
         <Header
           absolute
           color="transparent"
-          brand="Material Kit React"
+          brand={BRAND_NAME}
           rightLinks={<HeaderLinks />}
           {...rest}
         />
