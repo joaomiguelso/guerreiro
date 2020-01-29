@@ -6,6 +6,7 @@ import { FaTwitter, FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa"
 import team1 from "assets/img/faces/avatar.jpg"
 import team2 from "assets/img/faces/christian.jpg"
 import team3 from "assets/img/faces/kendall.jpg"
+import JO from "assets/img/faces/joaooliveira_color.jpg"
 
 const demo_description = <span>
     You can write here details about one of your team members. You can give
@@ -39,6 +40,13 @@ const demo_social_media = [
 export const TEAM_TITLE = "Here is our team"
 
 export const TEAM = [
+    {
+        name: "João Oliveira",
+        role: "Role",
+        description: demo_description,
+        imgSrc: JO,
+        socialMedia: demo_social_media,
+    },
     {
         name: "Gigi Hadid",
         role: "Role",

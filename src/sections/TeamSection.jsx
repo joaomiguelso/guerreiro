@@ -10,10 +10,10 @@ import Button from "components/CustomButtons/Button.jsx"
 import Card from "components/Card/Card.jsx"
 import CardBody from "components/Card/CardBody.jsx"
 import CardFooter from "components/Card/CardFooter.jsx"
-
+// styles
 import teamStyle from "assets/jss/material-kit-react/views/landingPageSections/teamStyle.jsx"
-
-import { TEAM, TEAM_TITLE } from "../../../constants/team"
+// constants
+import { TEAM, TEAM_TITLE } from "../constants/team"
 
 class TeamSection extends React.Component {
   renderSocialMedia(classes, socialMedia = []) {
