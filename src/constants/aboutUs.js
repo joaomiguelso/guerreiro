@@ -1,3 +1,5 @@
+import { useFirebase } from "gatsby-plugin-firebase"
+
 export const ABOUT_US_TITLE = "About Us.";
 
 export const ABOUT_US_SUBTITLE = "Meet the amazing team behind this project and find out more about how we work";
