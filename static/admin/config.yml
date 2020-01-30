@@ -1,0 +1,33 @@
+backend:
+  name: github
+  accept_roles:
+    - admin
+    - editor
+  repo: joaomiguelso/guerreiro # Path to your Github repository
+  branch: <% CURRENT_BRANCH %> # Branch to update (current branch dynamically set by Gulp)
+
+media_folder: "/static/media/uploads" # Folder where user uploaded files should go
+public_folder: "/public"
+publish_mode: "editorial_workflow" # Remove this line to enable simple publishing mode
+
+collections: # A list of collections the CMS should be able to edit
+
+  - name: "settings"
+    label: "Site settings"
+    folder: "data"
+    format: "yaml"
+    create: false
+    editor:
+      preview: false
+    fields:
+      - label: "[hidden]"
+        name: "title"
+        widget: "string"
+        default: "Enter here to edit."
+      - label: "Site name"
+        name: "name"
+        widget: "string"
+      - label: "Email"
+        name: "email"
+        widget: "string"
+     
